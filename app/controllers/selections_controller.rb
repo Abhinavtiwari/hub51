@@ -44,7 +44,7 @@ class SelectionsController < ApplicationController
     if @selection.save
       redirect_to selections_url, notice: "Selection updated successfully."
     else
-      render 'new'
+      render 'edit'
     end
   end
 
