@@ -21,7 +21,7 @@
       <tr>
         <td><%= starter.name %></td>
         <td><%= starter.description %></td>
-        <td><%= starter.category_id %></td>
+        <td><%= starter.category.name %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, starter_url(starter), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_starter_url(starter), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, starter_url(starter), method: 'delete', data: { confirm: "Do you really want to delete this starter?" }, class: 'btn btn-danger' %></td>
