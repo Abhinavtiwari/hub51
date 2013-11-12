@@ -23,10 +23,10 @@
     <% @selections.each do |selection| %>
       <tr>
         <td><%= selection.diner %></td>
-        <td><%= selection.first_starter_id %></td>
-        <td><%= selection.second_starter_id %></td>
-        <td><%= selection.first_entree_id %></td>
-        <td><%= selection.second_entree_id %></td>
+        <td><%= selection.first_starter.name %></td>
+        <td><%= selection.second_starter.name %></td>
+        <td><%= selection.first_entree.name %></td>
+        <td><%= selection.second_entree.name %></td>
         <td><%= selection.comments %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, selection_url(selection), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_selection_url(selection), class: 'btn btn-warning' %></td>
