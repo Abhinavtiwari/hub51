@@ -1,4 +1,6 @@
 Hub51::Application.routes.draw do
+  root 'selections#index'
+
   # Routes for the Restriction resource:
   # CREATE
   get '/restrictions/new', controller: 'restrictions', action: 'new', as: 'new_restriction'
@@ -124,7 +126,7 @@ Hub51::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
