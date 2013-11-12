@@ -2,16 +2,12 @@
   <h1>Starters</h1>
 </div>
 
-<p><%= link_to 'Add a New Starter', new_starter_url, class: 'btn btn-primary' %></p>
-
 <table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
       <th>Category</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -23,8 +19,6 @@
         <td><%= starter.description %></td>
         <td><%= starter.category.name %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, starter_url(starter), class: 'btn btn-primary' %></td>
-        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_starter_url(starter), class: 'btn btn-warning' %></td>
-        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, starter_url(starter), method: 'delete', data: { confirm: "Do you really want to delete this starter?" }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
