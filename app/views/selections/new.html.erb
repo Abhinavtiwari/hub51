@@ -13,28 +13,28 @@
   <div class="form-group">
     <%= label_tag :first_starter_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= select_tag :first_starter_id, options_from_collection_for_select(Starter.all, :id, :name), class: 'form-control' %>
+      <%= select_tag :first_starter_id, option_groups_from_collection_for_select(Category.all, :starters, :name, :id, :name), class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :second_starter_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= select_tag :second_starter_id, options_from_collection_for_select(Starter.all, :id, :name), class: 'form-control' %>
+      <%= select_tag :second_starter_id, option_groups_from_collection_for_select(Category.all, :starters, :name, :id, :name), class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :first_entree_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= select_tag :first_entree_id, options_from_collection_for_select(Entree.all, :id, :name), class: 'form-control' %>
+      <%= select_tag :first_entree_id, option_groups_from_collection_for_select(Category.all, :entrees, :name, :id, :name), class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :second_entree_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= select_tag :second_entree_id, options_from_collection_for_select(Entree.all, :id, :name), class: 'form-control' %>
+      <%= select_tag :second_entree_id, option_groups_from_collection_for_select(Category.all, :entrees, :name, :id, :name), class: 'form-control' %>
     </div>
   </div>
 
