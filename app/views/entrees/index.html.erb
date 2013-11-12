@@ -21,7 +21,7 @@
       <tr>
         <td><%= entree.name %></td>
         <td><%= entree.description %></td>
-        <td><%= entree.category_id %></td>
+        <td><%= entree.category.name %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, entree_url(entree), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_entree_url(entree), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, entree_url(entree), method: 'delete', data: { confirm: "Do you really want to delete this entree?" }, class: 'btn btn-danger' %></td>
