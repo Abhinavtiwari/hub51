@@ -1,7 +1,7 @@
 class EntreesController < ApplicationController
 
   def index
-    @entrees = Entree.all
+    @entrees = Entree.all.order(:category_id)
   end
 
   def show

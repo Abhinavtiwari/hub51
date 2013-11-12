@@ -1,7 +1,7 @@
 class StartersController < ApplicationController
 
   def index
-    @starters = Starter.all
+    @starters = Starter.all.order(:category_id)
   end
 
   def show
