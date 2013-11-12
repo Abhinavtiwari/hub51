@@ -9,6 +9,7 @@ class SelectionsController < ApplicationController
   end
 
   def new
+    @selection = Selection.new
   end
 
   def create
