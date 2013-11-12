@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1>Selections</h1>
+</div>
+
+<p><%= link_to 'Add a New Selection', new_selection_url, class: 'btn btn-primary' %></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Diner</th>
+      <th>First starter</th>
+      <th>Second starter</th>
+      <th>First entree</th>
+      <th>Second entree</th>
+      <th>Comments</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @selections.each do |selection| %>
+      <tr>
+        <td><%= selection.diner %></td>
+        <td><%= selection.first_starter_id %></td>
+        <td><%= selection.second_starter_id %></td>
+        <td><%= selection.first_entree_id %></td>
+        <td><%= selection.second_entree_id %></td>
+        <td><%= selection.comments %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, selection_url(selection), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_selection_url(selection), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, selection_url(selection), method: 'delete', data: { confirm: "Do you really want to delete this selection?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
