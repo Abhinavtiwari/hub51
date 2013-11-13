@@ -1,7 +1,10 @@
 class StartersController < ApplicationController
 
   def index
-    @starters = Starter.all.order(:category_id)
+    @starters = Starter.all
+    @starters = @starters.sort do |a, b|
+      b.points <=> a.points
+    end
   end
 
   def show

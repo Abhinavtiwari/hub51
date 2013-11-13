@@ -8,6 +8,9 @@
       <th>Name</th>
       <th>Description</th>
       <th>Category</th>
+      <th>First Selections</th>
+      <th>Second Selections</th>
+      <th>Points</th>
       <th></th>
     </tr>
   </thead>
@@ -18,6 +21,9 @@
         <td><%= starter.name %></td>
         <td><%= starter.description %></td>
         <td><%= starter.category.name %></td>
+        <td><%= starter.first_selections.count %></td>
+        <td><%= starter.second_selections.count %></td>
+        <td><%= starter.points %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, starter_url(starter), class: 'btn btn-primary' %></td>
       </tr>
     <% end %>

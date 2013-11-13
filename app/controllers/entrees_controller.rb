@@ -1,7 +1,10 @@
 class EntreesController < ApplicationController
 
   def index
-    @entrees = Entree.all.order(:category_id)
+    @entrees = Entree.all
+    @entrees = @entrees.sort do |a, b|
+      b.points <=> a.points
+    end
   end
 
   def show
